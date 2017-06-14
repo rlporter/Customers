@@ -5,6 +5,32 @@
 
   'use strict';
 
-  // Your Code Goes Here
+//   $.ajax({
+//   url: 'https://randomuser.me/api/',
+//   dataType: 'json',
+//   success: function(data) {
+//     console.log(data);
+//   }
+// });
 
-})();
+  // Your Code Goes Here
+fetch ('https://randomuser.me/api/?results=12')
+  then(function(response){
+      return response.json();
+  })
+
+  .then(function(json){
+    for(i=0; i<json.length; i++);
+
+    const firstCustomer = json[0];
+    const name === firstCustomer.name;
+    const email === firstCustomer.email;
+    const phone === firstCustomer.phone;
+    console.log(name);
+    console.log(email);
+    console.log(phone);
+    }
+
+  });
+
+});
