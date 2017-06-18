@@ -15,22 +15,19 @@
 
   // Your Code Goes Here
 fetch ('https://randomuser.me/api/?results=12')
-  then(function(response){
-      return response.json();
+  .then(function(response){
+      return response.json()
   })
 
   .then(function(json){
-    for(i=0; i<json.length; i++);
+    console.log(json)
+    let result = json.results
+    result.forEach(function(user){
+      console.log("Name: " + user.name.first)
+      console.log("Email: " + user.email)
+      console.log("Phone: " + user.phone)
 
-    const firstCustomer = json[0];
-    const name === firstCustomer.name;
-    const email === firstCustomer.email;
-    const phone === firstCustomer.phone;
-    console.log(name);
-    console.log(email);
-    console.log(phone);
-    }
+    })
+  })
 
-  });
-
-});
+})();
